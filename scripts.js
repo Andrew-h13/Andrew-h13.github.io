@@ -9,7 +9,7 @@ function closeChat() {
     document.getElementById("chatPopup").style.display = "none";
 }
 
-/* User input */
+/* functions */
 
 const chatDisplay = document.getElementById('chat-display');
 const userInput = document.getElementById('user-input');
@@ -17,7 +17,8 @@ const sendButton = document.getElementById('send-button');
 
 displayMessage('Bot', "Welcome to Recipe Combobulated! How may I assist you on your culinary journey?");
 displayMessage('Bot', "Would you like to learn more about the features of this website?");
-displayMessage('Bot', "Would you like a random recipe?");
+displayMessage('Bot', "or");
+displayMessage('Bot', "Would you like to learn a random recipe?");
 
 userInput.addEventListener('keyup', function (event) {
     if (event.key === 'Enter') {
@@ -61,16 +62,20 @@ function generateAnswer(userMessage) {
             clearChat();
             displayMessage('Bot', "Recipe Combobulated aims to have thousands of recipes at your fingertips. We also strive to give you recipes based on the availability of your present ingredients!");
             displayMessage('Bot', "If you would like to go back, please type 'back'");
+            displayMessage('Bot', "If you would like to end the chat, please type 'exit' or 'goodbye'");
         } else if (lowerCaseMessage.includes('back')) {
             clearChat();
             displayMessage('Bot', "Would you like to learn more about the features of this website?");
-            displayMessage('Bot', "Would you like a random recipe?");
+            displayMessage('Bot', "or");
+            displayMessage('Bot', "Would you like to learn a random recipe?");
+            displayMessage('Bot', "If you would like to end the chat, please type 'exit' or 'goodbye'");
         } else if (lowerCaseMessage.includes('random') || lowerCaseMessage.includes('recipe')) {
             displayRandomPastaRecipe();
-        } else if (lowerCaseMessage.includes('exit')) {
+        } else if (lowerCaseMessage.includes('exit') || lowerCaseMessage.includes('goodbye')) {
             break;
         } else {
-            displayMessage('Bot', "I'm sorry, I didn't quite catch that. Feel free to ask about recipes, and I'll do my best to help!");
+            clearChat();
+            displayMessage('Bot', "I'm sorry, I didn't quite catch that. Feel free to ask about a random recipes, or to learn more about the website!");
         }
 
         return;
@@ -147,11 +152,11 @@ function displayRandomPastaRecipe() {
         }
     ];
 
-    clearChat();
+
     const randomIndex = Math.floor(Math.random() * pastaRecipes.length);
-
-
     const recipe = pastaRecipes[randomIndex];
+
+    clearChat();
 
     displayMessage('Bot', `Here's a random pasta recipe for you: ${recipe.name}`);
     displayMessage('Bot', 'Ingredients:');
@@ -166,4 +171,5 @@ function displayRandomPastaRecipe() {
     });
 
     displayMessage('Bot', "If you would like to go back, please type 'back'");
+    displayMessage('Bot', "If you would like to end the chat, please type 'exit' or 'goodbye'");
 }
