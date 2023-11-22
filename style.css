@@ -86,12 +86,44 @@ body {
 
 /* Chatbot text box */
 
-.chatbox{
-    background-color: #f5f5dc;
-    color: #4c3626;
+#chat-display {
+    height: 300px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#user-input {
+    width: 70%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid #4c3626;
+    border-radius: 5px;
+    background-color: #4c3626;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6d503b;
+}
+
+.message-box {
+    border: 1px solid #ccc; /* Border style */
+    padding: 10px; /* Padding around the messages */
+    margin: 5px 0; /* Margin between messages */
+    border-radius: 5px; /* Rounded corners */
 }

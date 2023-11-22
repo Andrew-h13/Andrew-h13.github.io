@@ -32,24 +32,22 @@
         </div>
     </nav>
 
-    <!-- Chat button/icon -->
+    <!--Chatbot bottom icon-->
     <div class="chat-button" id="chatButton">
         <i class='bx bx-message'></i>
     </div>
 
-    <!-- Chat popup -->
+    <!--chatbot pop up and function-->
     <div class="chat-popup" id="chatPopup">
         <div class="chat-header">
             <span class="close" onclick="closeChat()">-</span>
             Help Desk
         </div>
-        <div class="chat-body">
-            <div>
-                <span  class="chatbox">Hello, Thank You for reaching out to us, how may I help you?</span>
-            </div>
-        </div>
+        <div id="chat-display"></div>
+        <input id="user-input" placeholder="Type your message...">
+        <button  onclick="sendMessage()" >Send</button>
     </div>
 
-    <script src="https://code.tidio.co/lqiaijq8pwe8pu4csgdm5a8ij1jwusb2.js" async></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
