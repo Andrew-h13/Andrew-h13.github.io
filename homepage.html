@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="bar">
+
+        <div class="menu-bar">
+            <div class="menu">
+                <div class="nav-home">
+                    <span class="text">Home</span>
+                </div>
+                <div class="nav-recipe">
+                    <span class="text">Recipes</span>
+                </div>
+                <div class="nav-community">
+                    <span class="text">Community</span>
+                </div>
+                <div class="nav-login">
+                    <span class="text">Login</span>
+                </div>
+                <div class="nav-contact-us">
+                    <span class="text">Contact Us</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Chat button/icon -->
+    <div class="chat-button" id="chatButton">
+        <i class='bx bx-message'></i>
+    </div>
+
+    <!-- Chat popup -->
+    <div class="chat-popup" id="chatPopup">
+        <div class="chat-header">
+            <span class="close" onclick="closeChat()">-</span>
+            Help Desk
+        </div>
+        <div class="chat-body">
+            <div>
+                <span  class="chatbox">Hello, Thank You for reaching out to us, how may I help you?</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
