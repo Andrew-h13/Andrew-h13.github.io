@@ -9,28 +9,63 @@
 </head>
 
 <body>
+    <!--this is the menu top bar-->
     <nav class="bar">
-
         <div class="menu-bar">
             <div class="menu">
                 <div class="nav-home">
-                    <span class="text">Home</span>
+                    <a href="#">
+                        <span class="text">Home</span>
+                    </a>
                 </div>
                 <div class="nav-recipe">
-                    <span class="text">Recipes</span>
+                    <a href="#">
+                        <span class="text">Recipes</span>
+                    </a>
                 </div>
                 <div class="nav-community">
-                    <span class="text">Community</span>
-                </div>
-                <div class="nav-login">
-                    <span class="text">Login</span>
+                    <a href="#">
+                        <span class="text">Community</span>
+                    </a>
                 </div>
                 <div class="nav-contact-us">
-                    <span class="text">Contact Us</span>
+                    <a href="#">
+                        <span class="text">Contact Us</span>
+                    </a>
                 </div>
+                <div class="nav-login">
+                    <a href="#">
+                        <span class="text">Login</span>
+                    </a>
+
+                </div>
+
             </div>
         </div>
+
     </nav>
+
+    <!--Fill in page-->
+    <div class="main-content">
+        <h1>Welcome to Recipe Combobulated</h1>
+        <p>Discover a world of delicious recipes and join our vibrant community of food enthusiasts.</p>
+        <p>Explore our collection of mouth-watering recipes or share your own culinary creations with the community.</p>
+    </div>
+
+    <div class="gallery">
+        <a href="#">
+            <img src="https://supervalu.ie/thumbnail/800x600/var/files/real-food/recipes/Uploaded-2020/spaghetti-bolognese-recipe.jpg" alt="spaghetti-bolognese-recipe">
+
+        </a>
+        <a href="#">
+            <img src="https://images.ctfassets.net/7t85a6f8wt2m/37NkpH9cu7PXuT2QUzQBbR/79342e4a6d28ed127bdff4dfedd9b5fd/The_Best_Chicken_Alfredo__1_.jpg?fm=webp&q=75&w=800&h=600&fit=fill" alt="Chicken-Alfredo-Pasta">
+
+        </a>
+        <a href="#">
+            <img src="https://cloudinary-cdn.whisk.com/image/upload/g_auto,g_auto,c_fill,q_60,f_auto,h_630,w_1200/g_auto,g_auto,c_fill,q_60,f_auto,h_600,w_800/v1635177128/v3/user-recipes/mvnhyupv69t9ftzdplgx.jpg" alt="Vegetarian-Pesto-Pasta">
+
+        </a>
+    </div>
 
     <!--Chatbot bottom icon-->
     <div class="chat-button" id="chatButton">
@@ -41,7 +76,7 @@
     <div class="chat-popup" id="chatPopup">
         <div class="chat-header">
             <span class="close" onclick="closeChat()">-</span>
-            Help Desk
+            Combobulated Ai
         </div>
         <div id="chat-display"></div>
         <input id="user-input" placeholder="Type your message...">
